@@ -10,8 +10,6 @@ class PostsIndex extends Component {
 
   render(){
 
-    console.log(this.props.posts);
-
     let postsToRender = <div>no posts to display</div>;
 
     if(this.props.posts){

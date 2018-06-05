@@ -12,7 +12,7 @@ const navBar = (props) => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <NavLink to="/" className="nav-link">Home</NavLink>
+              <NavLink exact to="/" className="nav-link">Home</NavLink>
             </li>
             <li className="nav-item">
               <NavLink to="/posts/new" className="nav-link">New post</NavLink>

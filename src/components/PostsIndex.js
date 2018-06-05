@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchPosts } from '../actions/index';
+import { Link } from 'react-router-dom';
 
 class PostsIndex extends Component {
 
@@ -13,7 +14,11 @@ class PostsIndex extends Component {
     let postsToRender = <div>no posts to display</div>;
 
     if(this.props.posts){
-      postsToRender = Object.values(this.props.posts).map( (post) => <li className="list-group-item" key={post.id}>{post.content}</li>);
+      postsToRender = Object.values(this.props.posts).map( (post) => {
+        return (
+          <li className="list-group-item" key={post.id}><Link to={`/posts/${post.id}`}>{post.title}</Link></li>
+        );
+      });
     }
 
 
